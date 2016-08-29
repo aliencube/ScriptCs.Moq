@@ -1,16 +1,14 @@
 ﻿using System.Reflection;
 
-using Aliencube.ScriptCs.Moq;
+using Aliencube.ScriptCs.Moq.Tests.Fixtures;
 
 using FluentAssertions;
 
 using Moq;
 
-using ScriptCs.Moq.Tests.Fixtures;
-
 using Xunit;
 
-namespace ScriptCs.Moq.Tests
+namespace Aliencube.ScriptCs.Moq.Tests
 {
     /// <summary>
     /// This represents the test entity for the <see cref="MoqPackContext"/> class.

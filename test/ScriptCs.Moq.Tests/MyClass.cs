@@ -1,4 +1,4 @@
-﻿namespace ScriptCs.Moq.Tests
+﻿namespace Aliencube.ScriptCs.Moq.Tests
 {
     /// <summary>
     /// This represents a sample entity for my class.

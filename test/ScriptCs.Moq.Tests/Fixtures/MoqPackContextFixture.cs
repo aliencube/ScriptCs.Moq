@@ -1,10 +1,8 @@
 ﻿using System;
 
-using Aliencube.ScriptCs.Moq;
-
 using ScriptCs.Contracts;
 
-namespace ScriptCs.Moq.Tests.Fixtures
+namespace Aliencube.ScriptCs.Moq.Tests.Fixtures
 {
     /// <summary>
     /// This represents the fixture entity for the <see cref="MoqPackContextTest"/> class.
