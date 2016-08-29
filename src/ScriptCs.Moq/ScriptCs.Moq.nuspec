@@ -1,32 +1,30 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>ScriptCs.AzureFunctions</id>
+    <id>ScriptCs.Moq</id>
     <version>$version$</version>
-    <title>ScriptCs.AzureFunctions</title>
+    <title>ScriptCs.Moq</title>
     <authors>Aliencube Community</authors>
     <owners>justinyoo</owners>
-    <licenseUrl>https://github.com/aliencube/ScriptCs.AzureFunctions/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/aliencube/ScriptCs.AzureFunctions</projectUrl>
+    <licenseUrl>https://github.com/aliencube/ScriptCs.Moq/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/aliencube/ScriptCs.Moq</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>
-      This provides a script pack to emulate Azure Functions on developers' local machine.
+      This provides an implementation of the Moq library for Script CS.
     </summary>
     <description>
       <![CDATA[
-        This provides a script pack to emulate Azure Functions on developers' local machine.
+        This provides an implementation of the Moq library for Script CS.
       ]]>
     </description>
     <copyright>Aliencube Community. All rights reserved.</copyright>
-    <tags>Aliencube, ScriptCs, Script, Pack, Azure, Functions</tags>
+    <tags>Aliencube, ScriptCs, Script, Pack, Moq</tags>
     <dependencies>
-      <dependency id="Microsoft.AspNet.WebApi.Core" version="5.2.3" />
-      <dependency id="Microsoft.Azure.WebJobs.Extensions" version="1.0.1" />
-      <dependency id="Newtonsoft.Json" version="8.0.3" />
+      <dependency id="Moq" version="5.2.3" />
       <dependency id="ScriptCs.Contracts" version="0.16.1" />
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\**\Aliencube.ScriptCs.AzureFunctions.*" target="lib" />
+    <file src="bin\Release\**\Aliencube.ScriptCs.Moq.*" target="lib" />
   </files>
 </package>
