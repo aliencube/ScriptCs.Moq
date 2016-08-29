@@ -12,6 +12,7 @@ IF NOT EXIST %MSBUILDDIR%msbuild.exe goto MissingMSBuildExe
 
 ::BUILD
 "tools\nuget.exe" restore ScriptCs.Moq.sln
+"%MSBUILDDIR%msbuild.exe" ScriptCs.Moq.sln /t:ReBuild /v:minimal /p:Configuration=Release;TargetFrameworkVersion=v4.5;DefineConstants="TRACE";OutPutPath=bin\Release\net45\
 "%MSBUILDDIR%msbuild.exe" ScriptCs.Moq.sln /t:ReBuild /v:minimal /p:Configuration=Release;TargetFrameworkVersion=v4.6;DefineConstants="TRACE";OutPutPath=bin\Release\net46\
 
 mkdir build

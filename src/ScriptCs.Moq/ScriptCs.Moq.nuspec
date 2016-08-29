@@ -20,7 +20,7 @@
     <copyright>Aliencube Community. All rights reserved.</copyright>
     <tags>Aliencube, ScriptCs, Script, Pack, Moq</tags>
     <dependencies>
-      <dependency id="Moq" version="5.2.3" />
+      <dependency id="Moq" version="4.5.21" />
       <dependency id="ScriptCs.Contracts" version="0.16.1" />
     </dependencies>
   </metadata>

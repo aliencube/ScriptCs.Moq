@@ -1,6 +1,59 @@
 # ScriptCs.Moq #
 
-**ScriptCs.Moq** provides an implementation of the Moq library for Script CS.
+**ScriptCs.Moq** provides a script package to implement the [Moq](https://github.com/moq/moq4) library in Script CS.
+
+
+## Getting Started ##
+
+In order to use **ScriptCs.Moq** in your `.csx` file, firstly you need to download NuGet package of this script pack.
+
+
+### `NuGet.Config` ###
+
+Your `NuGet.Config` **MUST** be compatible to version 2.x; otherwise ScriptCs will be complaining to install NuGet packages. There are a few ways to sort this out.
+
+* Update `%APPDATA%\NuGet\NuGet.Config`: This affects on all other packages globally.
+* Add `scriptcs_nuget.config` under your ScriptCs folder: This only affects on your specific ScriptCs folder.
+
+Either way, the NuGet endpoint URL for the version 2.x should be included like:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget.org" value="https://www.nuget.org/api/v2/" />
+  </packageSources>
+</configuration>
+```
+
+
+### Installing ScriptPack ###
+
+If your NuGet feed is ready, download **ScriptCs.Moq** into your working folder.
+
+```
+scriptcs -install ScriptCs.Moq
+```
+
+
+### Writing ScriptCs Codes ###
+
+Now you are ready to go. Here's a sample `run.csx` file.
+
+```csharp
+public interface IMyInterface
+{
+    string MyMethod();
+}
+
+var moq = Require<MoqPackContext>();
+
+var mocked = moq.Mock<IMyInterface>();
+mocked.Setup(p => p.MyMethod()).Returns("Hello World");
+
+var result = mocked.Object.MyMethod();
+Console.WriteLine(result);
+```
 
 
 ## Contribution ##
