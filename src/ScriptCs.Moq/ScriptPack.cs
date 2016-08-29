@@ -1,4 +1,6 @@
-﻿using ScriptCs.Contracts;
+﻿using System.Collections.Generic;
+
+using ScriptCs.Contracts;
 
 namespace Aliencube.ScriptCs.Moq
 {
@@ -8,11 +10,32 @@ namespace Aliencube.ScriptCs.Moq
     public class ScriptPack : IScriptPack
     {
         /// <summary>
+        /// Gets the list of reference assemblies.
+        /// </summary>
+        public static List<string> References = new List<string>()
+                                                {
+                                                    "mscorlib",
+                                                    "System",
+                                                    "System.Core",
+                                                    "Castle.Core",
+                                                    "Moq",
+                                                };
+
+        /// <summary>
+        /// Gets the list of namespaces.
+        /// </summary>
+        public static List<string> Namespaces = new List<string>()
+                                                {
+                                                    "Moq",
+                                                };
+        /// <summary>
         /// Initialises reference assemblies.
         /// </summary>
         /// <param name="session"><see cref="IScriptPackSession"/> instance.</param>
         public void Initialize(IScriptPackSession session)
         {
+            References.ForEach(session.AddReference);
+            Namespaces.ForEach(session.ImportNamespace);
         }
 
         /// <summary>
