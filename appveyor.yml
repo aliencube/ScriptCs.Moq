@@ -61,11 +61,11 @@
   - ps: .\run-tests.ps1 -Configuration $env:configuration -TargetVersion net46
   artifacts:
   - path: '**\ScriptCs.Moq.*.nupkg'
-    name: $(project_name)
+    name: ScriptCs.Moq
   deploy:
   - provider: NuGet
     api_key: $(nuget_api_key)
-    artifact: $(project_name)
+    artifact: ScriptCs.Moq
     on:
       branch: release/all
       platform: Any CPU
@@ -74,7 +74,7 @@
     tag: v$(appveyor_build_version)
     description: $(project_name)-v$(appveyor_build_version) has been released
     auth_token: $(github_auth_token)
-    artifact: $(project_name)
+    artifact: ScriptCs.Moq
     on:
       branch: release/all
       platform: Any CPU
