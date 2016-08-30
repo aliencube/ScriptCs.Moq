@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ScriptCs.Moq</id>
+    <version>$version$</version>
+    <title>ScriptCs.Moq</title>
+    <authors>Aliencube Community</authors>
+    <owners>justinyoo</owners>
+    <licenseUrl>https://github.com/aliencube/ScriptCs.Moq/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/aliencube/ScriptCs.Moq</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>
+      This provides an implementation of the Moq library for Script CS.
+    </summary>
+    <description>
+      <![CDATA[
+        This provides an implementation of the Moq library for Script CS.
+      ]]>
+    </description>
+    <copyright>Aliencube Community. All rights reserved.</copyright>
+    <tags>Aliencube, ScriptCs, Script, Pack, Moq</tags>
+    <dependencies>
+      <dependency id="Moq" version="4.5.21" />
+      <dependency id="ScriptCs.Contracts" version="0.16.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\**\Aliencube.ScriptCs.Moq.*" target="lib" />
+  </files>
+</package>
