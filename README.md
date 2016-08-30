@@ -1,5 +1,7 @@
 # ScriptCs.Moq #
 
+[![Build status](https://ci.appveyor.com/api/projects/status/if7cxf3jy0qxwswo/branch/dev?svg=true)](https://ci.appveyor.com/project/justinyoo/scriptcs-moq/branch/dev) | [![](https://img.shields.io/nuget/v/ScriptCs.Moq.svg)](https://www.nuget.org/packages/ScriptCs.Moq)
+
 **ScriptCs.Moq** provides a script package to implement the [Moq](https://github.com/moq/moq4) library in Script CS.
 
 
@@ -36,7 +38,7 @@ scriptcs -install ScriptCs.Moq
 ```
 
 
-### Writing ScriptCs Codes ###
+### Writing ScriptCs Code ###
 
 Now you are ready to go. Here's a sample `run.csx` file.
 
@@ -55,6 +57,14 @@ var result = mocked.Object.MyMethod();
 Console.WriteLine(result);
 ```
 
+
+### Running ScriptCs Code ###
+
+Once you complete writing a code, run it on your command prompt:
+
+```
+scriptcs run.csx
+```
 
 ## Contribution ##
 
