@@ -60,7 +60,7 @@
   - ps: .\run-tests.ps1 -Configuration $env:configuration -TargetVersion net45
   - ps: .\run-tests.ps1 -Configuration $env:configuration -TargetVersion net46
   artifacts:
-  - path: '**\$(project_name).*.nupkg'
+  - path: '**\ScriptCs.Moq.*.nupkg'
     name: $(project_name)
   deploy:
   - provider: NuGet
